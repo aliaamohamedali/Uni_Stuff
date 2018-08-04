@@ -1,0 +1,36 @@
+n1 = [-12:12];
+x1 = [-2,-1,0,1,2];
+x1=[x1,x1,x1,x1,x1];
+stem(n1,x1)
+
+
+x2=stepseq(0,0,21)-stepseq(20,0,21);
+n2=[0:21];
+e=exp(0.1*n2);
+x2=e.*x2;
+x2=[x2,x2,x2];
+n2=[-22:43];
+figure
+stem(n2,x2);
+axis([min(n2)-2,max(n2)+2,min(x2),max(x2)+2]);
+
+
+x3=(stepseq(0,0,11)-stepseq(10,0,11));
+n3 = [0:11];
+s = sin(0.1*pi*n3);
+x3=s.*x3;
+x3=[x3,x3,x3,x3];
+n3=[-12:35];
+figure
+stem(n3,x3);
+
+
+
+n4=[0:24];
+x4a=[1 2 3];
+x4a=[x4a,x4a,x4a,x4a,x4a,x4a,x4a,x4a,x4a];
+x4b=[1 2 3 4];
+x4b=[x4b,x4b,x4b,x4b,x4b,x4b,x4b];
+x4=x4a(1:25)+x4b(1:25);
+figure
+stem(n4,x4)

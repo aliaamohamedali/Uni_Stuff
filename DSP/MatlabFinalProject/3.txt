@@ -1,0 +1,25 @@
+%% 3a)
+num=[1 -2 2 -1];
+a=[1 -1];
+b=[1 -0.5];
+c=[1 -0.2];
+d=conv(b,c);
+den=conv(a,d);
+H=tf(num,den,-1,'Variable','z^-1')
+h=filter(num,den,[1 zeros(1,29)]);
+figure(1);
+stem(h)
+grid on;
+figure(2);
+zplane([num],[den])
+figure(3);
+pzmap(H)
+%% 3b)
+num=[0.03 -0.02 0.01 0 0];
+den=[1 -2.8 3.02 -1.468 0.27];
+H=tf(num,den,-1,'Variable','z^-1')
+pzmap(H);
+x=[1 -1];
+den2=conv(den,x);
+Y=tf(num,den2,-1,'Variable','z^-1')
+[r,p,k]=residuez(num,den2)
