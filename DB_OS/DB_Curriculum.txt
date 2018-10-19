@@ -1,0 +1,10 @@
+DB and DB users 				- E(1)
+DB System Concepts and Architecture 		- E(2)
+Data Modeling using ER Model			- E(3a, 3b)
+Relational Model				- K(2), E(5)
+Relational Design				- E(9)
+
+Functional Dependencies and Normalization	- E(14)
+Relational Algebra				- K(6)
+Disc Storage, Basic File Structures, Hashing, and Modern Storage Architectures
+						- E(16)
